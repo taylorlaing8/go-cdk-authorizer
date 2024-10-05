@@ -1,0 +1,50 @@
+{
+	"name": "cf-authorizer",
+	"version": "0.1.0",
+	"bin": {
+		"cf-authorizer": "bin/cf-authorizer.ts"
+	},
+	"scripts": {
+		"build": "tsc",
+		"go:build": "go run build-lambda.go",
+		"go:unit": "cd ./src && go test ./unit-tests",
+		"go:e2e": "cd ./src && go test ./end-to-end-tests",
+		"go:integration": "cd ./src && go test ./integration-tests",
+		"watch": "tsc -w",
+		"test": "jest",
+		"cdk": "cdk"
+	},
+	"devDependencies": {
+		"@types/aws-lambda": "^8.10.141",
+		"@types/jest": "^29.5.12",
+		"@types/node": "^20.14.11",
+		"aws-cdk": "2.149.0",
+		"aws-cdk-lib": "2.149.0",
+		"aws-lambda": "^1.0.7",
+		"constructs": "^10.3.0",
+		"dotenv": "^16.4.5",
+		"env-var": "^7.5.0",
+		"esbuild": "^0.23.0",
+		"jest": "^29.7.0",
+		"npm-check-updates": "^16.14.20",
+		"source-map-support": "^0.5.21",
+		"ts-jest": "^29.2.3",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.5.3"
+	},
+	"dependencies": {
+		"@aws-sdk/client-dynamodb": "^3.616.0",
+		"@aws-sdk/client-secrets-manager": "^3.616.0",
+		"@aws-sdk/client-ssm": "^3.616.0",
+		"@aws-sdk/lib-dynamodb": "^3.616.0",
+		"@azure/msal-node": "^2.11.1",
+		"@types/crypto-js": "^4.2.2",
+		"@types/uuid": "^10.0.0",
+		"ajv": "^8.17.1",
+		"axios": "^1.7.2",
+		"crypto-js": "^4.2.0",
+		"jsonwebtoken": "^9.0.2",
+		"jwks-rsa": "^3.1.0",
+		"uuid": "^10.0.0"
+	}
+}
